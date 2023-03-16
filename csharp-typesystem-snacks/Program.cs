@@ -144,10 +144,8 @@ void snack9()
         for (int i = 0;i < arrNumbers.Length;i++)
         {
             arrNumbers[i] = inputnumber;
-        }
-        for (int i = 0;i<arrNumbers.Length; i++)
-        {
             somma += arrNumbers[i];
+
         }
         Console.WriteLine(somma);
     }
