@@ -2,17 +2,39 @@
 //snack1();
 using System.Diagnostics.CodeAnalysis;
 
-//snack2();
-//snack3();
-//snack4();
-//snack5();
-//snack6();
-//snack7();
-//snack8();
-//snack9();
-//snack10();
-//snack11();
-snack12();
+Console.WriteLine("Seleziona uno degli snack da 1 a 12");
+int inputSnack = Convert.ToInt16(Console.ReadLine());
+switch (inputSnack)
+{
+    case 1:
+        snack1();
+        break;
+    case 2: 
+        snack2();
+        break;
+        case 3: snack3();
+        break;
+        case 4: snack4();
+        break;
+        case 5: snack5();
+        break;
+        case 6: snack6();   
+        break;
+        case 7: snack7();
+        break;  
+        case 8: snack8();
+        break;  
+        case 9: snack9();
+        break;  
+        case 10: snack10();
+        break;  
+            case 11: snack11();
+        break;  
+            case 12: snack12();
+        break;
+
+            
+}
 
 
 
