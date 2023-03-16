@@ -9,7 +9,10 @@ using System.Diagnostics.CodeAnalysis;
 //snack6();
 //snack7();
 //snack8();
-snack9();
+//snack9();
+//snack10();
+//snack11();
+snack12();
 
 
 
@@ -137,16 +140,74 @@ void snack9()
 {
     int[] arrNumbers = new int[50];
     int somma = 0;
-    while (somma < 50)
+    int index = 0;
+    while (index < 50)
     {
         Console.WriteLine("Dammi un numero?");
         int inputnumber = Convert.ToInt16(Console.ReadLine());
-        for (int i = 0;i < arrNumbers.Length;i++)
-        {
-            arrNumbers[i] = inputnumber;
-            somma += arrNumbers[i];
-
-        }
+         arrNumbers[index] = inputnumber;
+         somma += inputnumber;
+         index += somma; 
         Console.WriteLine(somma);
+    }
+}
+void snack10()
+{
+    int N = Convert.ToInt32(Console.ReadLine());
+    var random = new Random();
+    for(int i = 0; i < N; i++)
+    {
+        var ints = new int[10];
+        for(int j = 0; j < 10; j++)
+        {
+            ints[j] = random.Next(1, 100);
+        }
+        foreach(var num in ints)
+        {
+            Console.Write($"{num}");
+        }
+        Console.WriteLine();
+    }
+}
+void snack11()
+{
+    Console.WriteLine("Dimmi la Prima Parola:");
+    string inputWord1 = Console.ReadLine() ?? "";
+    Console.WriteLine("Dimmi la Seconda Parola:");
+    string inputWord2 = Console.ReadLine() ?? "";
+    wordLenght(inputWord1 , inputWord2);
+   
+void wordLenght(string word1, string word2)
+{
+    if (word1.Length == word2.Length)
+    {
+        Console.WriteLine(word1 + word2);
+    }
+    else if (word1.Length > word2.Length)
+    {
+        Console.WriteLine(word1);
+    }
+    else
+    {
+        Console.WriteLine(word2);
+    }
+}
+   
+}
+void snack12()
+{
+    Console.WriteLine("Dimmi un numero");
+    int inputnumber = Convert.ToInt16(Console.ReadLine());
+    checkNumber(inputnumber); 
+    void checkNumber(int num)
+    {
+        if (num % 2 == 0)
+        {
+            Console.WriteLine("Il numero è pari");
+        }
+        else
+        {
+            Console.WriteLine("Il numero è dispari"); 
+        }
     }
 }
