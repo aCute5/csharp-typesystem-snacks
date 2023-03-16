@@ -4,8 +4,12 @@ using System.Diagnostics.CodeAnalysis;
 
 //snack2();
 //snack3();
-snack4();
-snack5();
+//snack4();
+//snack5();
+//snack6();
+//snack7();
+//snack8();
+snack9();
 
 
 
@@ -76,5 +80,75 @@ void snack5()
     else
     {
         Console.WriteLine(inputnumber + 1);
+    }
+}
+void snack6()
+{
+    string[] invitati = { "Camillo", "Ludovico", "Michele", "Andrea", "Luca", "Marco" };
+    Console.WriteLine("Qual è il tuo nome?");
+    string inputName = Console.ReadLine() ?? "";
+    if (invitati.Contains(inputName))
+        {
+        Console.WriteLine("Puoi Entrare");
+    }
+    else
+    {
+        Console.WriteLine("Non sei presente nella lista");
+    }
+
+   
+}
+void snack7()
+{
+    int[] numbers = new int [6];
+    for (int i = 0; i < numbers.Length;i++)
+    {
+        Console.WriteLine("Dammi un numbero");
+    int inputnumber = Convert.ToInt16(Console.ReadLine());
+        if (inputnumber % 2 == 0)
+        {
+            numbers[i] = inputnumber;
+        }
+        else
+        {
+            Console.WriteLine("Il numero non è pari");
+        }
+    }
+    for (int i =0; i < numbers.Length; i++)
+    {
+        Console.WriteLine(numbers[i]);
+    }
+
+}
+void snack8()
+{
+    int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8 };
+    int somma = 0;
+    for (int i = 0;i < numbers.Length;i++)
+    {
+        if(i% 2 != 0)
+        {
+            somma += numbers[i];
+        }
+    }
+    Console.WriteLine(somma);
+}
+void snack9()
+{
+    int[] arrNumbers = new int[50];
+    int somma = 0;
+    while (somma < 50)
+    {
+        Console.WriteLine("Dammi un numero?");
+        int inputnumber = Convert.ToInt16(Console.ReadLine());
+        for (int i = 0;i < arrNumbers.Length;i++)
+        {
+            arrNumbers[i] = inputnumber;
+        }
+        for (int i = 0;i<arrNumbers.Length; i++)
+        {
+            somma += arrNumbers[i];
+        }
+        Console.WriteLine(somma);
     }
 }
